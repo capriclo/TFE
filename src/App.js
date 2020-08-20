@@ -5,12 +5,6 @@ import Navbar from './Components/Navbar';
 import NewArticle from './Components/NewArticle/NewArticle';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NewClient from './Components/NewClient/NewClient';
-import Home from './Components/DataBase/htdocs/react-php/Home'
-
-
-
-
-
 
 function App() {
   return (
@@ -19,7 +13,6 @@ function App() {
         <Switch>
         <Route exact path="/articles" component={NewArticle} />
         <Route exact path="/clients" component={NewClient} />
-        <Route exact path="/home" component={Home} />
         </Switch>
          
        

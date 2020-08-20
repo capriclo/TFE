@@ -46,9 +46,6 @@ export class Navbar extends Component {
                         <li className="nav-item">
                             <a className="nav-link" href="/help">?</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/home">home</a>
-                        </li>
                     </ul>
                 </div>
             </nav>
