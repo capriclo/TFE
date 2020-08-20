@@ -97,6 +97,8 @@ body{
 .client_data{
     margin-top: 5%;
     margin-right: 0%;
+    margin-left: 0%;
+    margin-bottom: 5%;
 
 }
 
@@ -108,4 +110,42 @@ body{
     padding-right: 0%;
     width: 25%;
     padding-left: 2%;
+}
+
+.caracteristicsv2{
+    padding-right: 0%;
+    width: 25%;
+    padding-left: 20%;
+}
+
+.table_previous_purchase{
+    text-align: center;
+}
+.search-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 20%;
+    height: 40px ;
+    padding: 1%;
+    font-weight: 500;
+    background-color: #6495ED;
+    color: white;
+    cursor: pointer;
+}
+
+.input-search{
+    border-radius: 10px;
+}
+
+.archive-client-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 100%;
+    height: 40px ;
+    padding: 1%;
+    font-weight: 500;
+    background-color: #6495ED;
+    color: white;
+    cursor: pointer;
+
 }
