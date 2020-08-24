@@ -10,6 +10,7 @@ import Basket from './Components/Basket/Basket';
 import OutOfStock from './Components/OutOfStock/OutOfStock';
 import Order from './Components/Order/Order'
 import ArchivedSuppliers from './Components/ArchivedSuppliers/ArchivedSuppliers'
+import Reception from './Components/Reception/Reception';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/out-of-stocks" component={OutOfStock} />
           <Route exact path="/order" component={Order} />
           <Route exact path="/supplier" component={ArchivedSuppliers} />
+          <Route exact path="/reception" component={Reception} />
         </Switch>
        
       </BrowserRouter>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export class Navbar extends Component {
-    render() {
+    render() { 
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a className="navbar-brand" href="/">Navbar</a>
@@ -19,7 +19,7 @@ export class Navbar extends Component {
                         </li>
                         <li className="nav-item dropdown">
                             <NavLink className="nav-link dropdown-toggle" to="/articles" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Articles
+                                Articles
                             </NavLink>
                         </li>
                         <li className="nav-item">
