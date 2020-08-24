@@ -104,6 +104,7 @@ body{
 
 .client_id{
     margin-top: 3%;
+    margin-left: 2%;
 }
 
 .caracteristics{
@@ -137,7 +138,7 @@ body{
     border-radius: 10px;
 }
 
-.archive-client-btn{
+.archive-Basket-btn{
     border: none;
     border-radius: 1.5rem;
     width: 100%;
@@ -150,7 +151,76 @@ body{
 
 }
 
-.btn-new-client{
+.btn-new-Basket{
     margin-top: 10%;
     text-align: center;
+}
+
+.select_TVA{
+    width: 50%;
+}
+
+.total_and_payement{
+    margin-top: 0%;
+    margin-left: 4%;
+    margin-bottom: 8%;
+    
+    
+}
+
+.payement{
+    margin-left: 10%;
+    width: 25%;
+    text-align: center;
+}
+
+.paragraph_total_and_payement{
+    margin: 0%;
+}
+
+.contenu_page_basket{
+    display: flex;
+}
+
+.block_blanc{
+    max-width: 90%;
+}
+
+.basket_block{
+    max-width: 60%;
+    width: 50%;
+    margin-top: 3%;
+}
+
+.client_block{
+    max-width: 60%;
+    width: 50%;
+    margin-left: 5%;
+}
+
+.search_client{
+    margin-left:2%
+}
+
+.div_search_article {
+    display: flex;
+}
+
+.form_search_article{
+    width: 70%;
+    display: flex;
+}
+
+.btn_search_article{
+    width: 100%;
+    text-align: center;
+}
+
+.div_icons{
+    width: 30%;
+    text-align: right;
+}
+
+.print_icon{
+    margin-right: 4%;
 }

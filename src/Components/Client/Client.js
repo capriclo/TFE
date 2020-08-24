@@ -24,7 +24,8 @@ export class Client extends Component {
                                 </div>
                             </div>
                             <div className="col-md-2">
-                            <input type="submit" className="archive-client-btn aqua-gradient" name="btnAddMore" value="Archiver le client"/>
+                                <input type="submit" className="archive-client-btn aqua-gradient" name="btnAddMore" value="Archiver le client"/>
+                                <a href="/new_client"><input className="archive-client-btn btn-new-client aqua-gradient" name="btnAddMore" value="Nouveau client"/></a>
                             </div>
                         </div>
                         <div className="row client_data">
@@ -84,10 +85,10 @@ export class Client extends Component {
                             <input type="submit" className="search-btn aqua-gradient" name="btnAddMore" value="Search"/>
                         </form>
                     </div> 
-                    <div class="tab-content table_previous_purchase">
-                        <div class="tab-pane active" id="home">
-                            <div class="table-responsive">
-                                <table class="table table-hover">
+                    <div className="tab-content table_previous_purchase">
+                        <div className="tab-pane active" id="home">
+                            <div className="table-responsive">
+                                <table className="table table-hover">
                                     <thead>
                                         <tr>
                                         <th>Titre</th>
@@ -97,7 +98,7 @@ export class Client extends Component {
                                         </tr>
                                     </thead>
                                     <tbody id="items">
-                                        <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle ">
+                                        <tr data-toggle="collapse" data-target="#demo1" className="accordion-toggle ">
                                             <td>HungerGames</td>
                                             <td>12.50€</td>
                                             <td>5</td>
@@ -105,7 +106,7 @@ export class Client extends Component {
                                         </tr>
                                     </tbody>
                                     <tbody id="items">
-                                        <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle ">
+                                        <tr data-toggle="collapse" data-target="#demo1" className="accordion-toggle ">
                                             <td>Harry Potter</td>
                                             <td>16€</td>
                                             <td>2</td>
@@ -113,7 +114,7 @@ export class Client extends Component {
                                         </tr>
                                     </tbody>
                                     <tbody id="items">
-                                        <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle ">
+                                        <tr data-toggle="collapse" data-target="#demo1" className="accordion-toggle ">
                                             <td>Nés à minuit</td>
                                             <td>20€</td>
                                             <td>1</td>
@@ -121,7 +122,7 @@ export class Client extends Component {
                                         </tr>
                                     </tbody>
                                     <tbody id="items">
-                                        <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle ">
+                                        <tr data-toggle="collapse" data-target="#demo1" className="accordion-toggle ">
                                             <td>Percy Jackson</td>
                                             <td>22€</td>
                                             <td>1</td>
