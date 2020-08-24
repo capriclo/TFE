@@ -38,7 +38,7 @@ export class Navbar extends Component {
                             <a className="nav-link" href="/out-of-stocks">Articles épuisés</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/new-order">Commande fournisseur</a>
+                            <a className="nav-link" href="/order">Commande fournisseur</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/reception">Réceptions</a>
