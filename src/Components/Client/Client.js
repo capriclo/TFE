@@ -24,7 +24,7 @@ export class Client extends Component {
                                 </div>
                             </div>
                             <div className="col-md-2">
-                                <input type="submit" className="archive-client-btn aqua-gradient" name="btnAddMore" value="Archiver le client"/>
+                                <a href="/archived_clients"><input className="archive-client-btn aqua-gradient" name="btnAddMore" value="Archiver le client"/></a>
                                 <a href="/new_client"><input className="archive-client-btn btn-new-client aqua-gradient" name="btnAddMore" value="Nouveau client"/></a>
                             </div>
                         </div>

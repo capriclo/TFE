@@ -8,10 +8,24 @@ import Client from './Components/Client/Client';
 import NewClient from './Components/NewClient/NewClient';
 import Basket from './Components/Basket/Basket';
 import OutOfStock from './Components/OutOfStock/OutOfStock';
-import Order from './Components/Order/Order'
-import ArchivedSuppliers from './Components/ArchivedSuppliers/ArchivedSuppliers'
+import Order from './Components/Order/Order';
+import ArchivedSuppliers from './Components/ArchivedSuppliers/ArchivedSuppliers';
 import Reception from './Components/Reception/Reception';
+import ArchivedClients from './Components/ArchivedClients/ArchivedClients';
+import './react-php/api/index.php';
+import axios from 'axios';
+import "./Fichiers_JSON/clientdata.json"
 
+axios.post('../Fichiers_JSON/clientdata.json', {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+});
 
 function App() {
   return (
@@ -26,10 +40,13 @@ function App() {
           <Route exact path="/order" component={Order} />
           <Route exact path="/supplier" component={ArchivedSuppliers} />
           <Route exact path="/reception" component={Reception} />
+          <Route exact path="/archived_clients" component={ArchivedClients} />
+
+
+          
         </Switch>
        
       </BrowserRouter>
-
       
   );
 }
