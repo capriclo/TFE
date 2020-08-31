@@ -12,20 +12,8 @@ import Order from './Components/Order/Order';
 import ArchivedSuppliers from './Components/ArchivedSuppliers/ArchivedSuppliers';
 import Reception from './Components/Reception/Reception';
 import ArchivedClients from './Components/ArchivedClients/ArchivedClients';
-import './react-php/api/index.php';
-import axios from 'axios';
 import "./Fichiers_JSON/clientdata.json"
 
-axios.post('../Fichiers_JSON/clientdata.json', {
-    firstName: 'Fred',
-    lastName: 'Flintstone'
-  })
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-});
 
 function App() {
   return (

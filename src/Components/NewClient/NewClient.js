@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './NewClient.css';
-import {PostData} from '../../services/Services/PostData';
-
+import axios from 'axios';
+//const express = require('express');
+//const newclient = express();
 
 
 export class NewClient extends Component {
@@ -15,43 +16,36 @@ export class NewClient extends Component {
             address:"",
             email: "",
             phone:"",
-            registrationErrors: ""
           };
-        this.signup = this.signup.bind(this);
-        this.onChange = this.onChange.bind(this);
-       
-        var config ={
-            host: '127.0.0.1',
-           user: 'root',
-           password: 'Root123*',
-           port: '3306', 
-           database: 'tfe'
-        }
-        var mysql = require ('mysql');
-        var connection = mysql.createConnection(config);
-        connection.connect();
-        console.log(connection);
 
-       
     }
 
-    signup() {
-        if(this.state.name && this.state.first_name && this.state.address && this.state.email && this.state.phone){
-            PostData('signup',this.state).then((result) => {
-                let responseJson = result;
-                if(responseJson.userData){
-                    sessionStorage.setItem('userData',JSON.stringify(responseJson));
-                }
-                else alert(result.error);
-            });
-        }
-    }
-
-    onChange(e){
+    onChange = e =>{
         this.setState({[e.target.name] : e.target.value});
+        console.log(this.state.phone);
+    }
+
+    submitHandler = e => {
+        e.preventDefault()
+        console.log(this.state)
+         var data = JSON.stringify(this.state)
+         console.log(data)
+        axios.post('http://localhost:3014/clients',data)
+        .then(response => {
+            console.log(response) 
+        }).catch(error =>{
+            console.log(error)
+        })
+        /*newclient.post('http://localhost:3012/', this.state)
+        .then(response => {
+            console.log(response) 
+        }).catch(error =>{
+            console.log(error)
+        })*/
     }
 
     render() {
+        const {name, first_name, address, email, phone} = this.state
         return (
             <div>
                 <div className="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
@@ -60,30 +54,30 @@ export class NewClient extends Component {
                             <div className="card-heading"></div>
                             <div className="card-body">
                                 <h2 className="title">Nouveau Client</h2>
-                                <form method="POST">
+                                <form onSubmit={this.submitHandler}>
                                     <div className="input-group">
-                                        <input className="input--style-3" type="text" placeholder="Nom" name="name" onChange={this.onChange} />
+                                        <input className="input--style-3" type="text" placeholder="Nom" name="name" value={name} onChange={this.onChange} />
                                     </div>
                                     <div className="input-group">
-                                        <input className="input--style-3" type="text" placeholder="Prénom" name="first_name" onChange={this.onChange} />
+                                        <input className="input--style-3" type="text" placeholder="Prénom" name="first_name"  value={first_name} onChange={this.onChange} />
                                     </div>
                                     <div className="input-group">
-                                        <input className="input--style-3" type="text" placeholder="Adresse" name="address" onChange={this.onChange} />
+                                        <input className="input--style-3" type="text" placeholder="Adresse" name="address"  value={address} onChange={this.onChange} />
                                     </div>
                                     <div className="input-group">
-                                        <input className="input--style-3" type="email" placeholder="Email" name="email" onChange={this.onChange} required />
+                                        <input className="input--style-3" type="email" placeholder="Email" name="email" value={email} onChange={this.onChange} required />
                                     </div>
                                     <div className="input-group">
-                                        <input className="input--style-3" type="text" placeholder="Phone" name="phone" onChange={this.onChange} />
+                                        <input className="input--style-3" type="text" placeholder="Phone" name="phone" value={phone} onChange={this.onChange} />
                                     </div>
                                     <div className="p-t-10">
-                                        <button className="btn btn--pill btn--green" onClick={this.signup}>Créer le client</button>
+                                        <button className="btn btn--pill btn--green" type="submit">Créer le client</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
         )
     }

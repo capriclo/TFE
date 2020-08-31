@@ -7,8 +7,10 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.5.0",
     "express": "^4.17.1",
+    "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "postdata": "0.0.2",
     "react": "^16.13.1",
@@ -40,7 +42,16 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "author": "capriclo",
+  "license": "ISC",
+  "keywords": [
+    "node",
+    "restful",
+    "api",
+    "tfe",
+    "v1"
+  ]
 }
