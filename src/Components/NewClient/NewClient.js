@@ -30,7 +30,7 @@ export class NewClient extends Component {
         console.log(this.state)
          var data = JSON.stringify(this.state)
          console.log(data)
-        axios.post('http://localhost:3014/clients',data)
+        axios.post('https://github.com/%3Ccapriclo%3E/%3CTFE%3E/blob/master/db.json',data)
         .then(response => {
             console.log(response) 
         }).catch(error =>{

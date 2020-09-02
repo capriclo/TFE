@@ -2,13 +2,13 @@ const express = require('express');
 const router = express.Router();
 //let mysql = require('mysql');
 
-router.get('https://cors-anywhere.herokuapp.com/', (req, res, next)=> {
+router.get('/', (req, res, next)=> {
     res.status(200).json({
         message : 'Handling GET request to /products'
     })
 })
 
-router.post('https://cors-anywhere.herokuapp.com/', (req, res, next)=> {
+router.post('/', (req, res, next)=> {
     const client = {
         name: req.body.name, 
         firstname : req.body.firstname,

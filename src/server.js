@@ -52,8 +52,8 @@ connection.connect(function(err) {
     })*/
 
     // Routes whitch should handle request
-    newclient.use('https://cors-anywhere.herokuapp.com/clients', clientsRoutes)
-    newclient.use('https://cors-anywhere.herokuapp.com/books', bookRoutes)
+    newclient.use('/clients', clientsRoutes)
+    newclient.use('/books', bookRoutes)
 
     newclient.use((req, res, next) => {
         const error = new Error('Not found');
